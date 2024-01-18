@@ -1,10 +1,3 @@
-pipeline {
-    agent any 
-    stages {
-        stage('Stage 1') {
-            steps {
-                echo 'Hello world!' 
-            }
-        }
-    }
-}
+@Library('piper-lib-os') _
+
+piperPipeline script: this
