@@ -1,11 +1,11 @@
 @Library('piper-lib-os') _
-node() {
-    stage('prepare') {
-        checkout scm
-        setupCommonPipelineEnvironment script:this
-    }
-}
 
-stage('build') {
-    mtaBuild script: this
+node() {
+    stage('init') {
+        deleteDir()
+        checkout scm
+    }
+    stage('deployIntegrationArtifact Command') {
+        integrationArtifactDeploy script: this
+    }
 }
