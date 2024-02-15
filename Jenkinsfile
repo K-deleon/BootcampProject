@@ -5,7 +5,7 @@ node() {
         deleteDir()
         checkout scm
     }
-    stage('deployIntegrationArtifact Command') {
-        integrationArtifactDeploy script: this
+    stage('Integration Artifact Download Command') {
+        integrationArtifactDownload script: this
     }
 }
