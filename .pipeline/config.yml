@@ -2,3 +2,4 @@ steps:
   integrationArtifactDownload:
     cpiApiServiceKeyCredentialsId: KeyCred
     integrationFlowId: TrialIntegrationFlow
+    integrationFlowVersion: "1.0.1"
